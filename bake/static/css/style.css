@@ -1,0 +1,94 @@
+* {
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+a {
+    -webkit-transition: background-position 1ms linear;
+    -moz-transition: background-position 1ms linear;
+    -o-transition: background-position 1ms linear;
+    transition: background-position 1ms linear;
+}
+
+*:focus {
+    outline: 1px #00E4FF solid;
+}
+
+h1{
+	color: #00E4FF;
+	font-family: "Wendy LP Std";
+	font-size: 120px;
+	line-height: 0px;
+	text-align: center;
+	padding: 30px;
+	margin-top: 100px;
+}
+
+#lightbox{
+	border: 1px #ddd solid;
+	border-radius: 10px;
+	text-align: center;
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+h2{
+	font-family: "Proxima Nova";
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 20px;
+	color: #313131;
+	margin: 50px 0px;
+}
+
+.inputbox{
+	display: inherit;
+	border: 1px #ddd solid;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 200;
+	font-family: "Avenir Next";
+	margin: 20px 10px;
+	width: 90.5%;
+}
+
+.button{
+	border: 1px #00E4FF solid;
+	padding: 10px;
+	font-family: "Avenir Next";
+	background-color: #00E4FF;
+	border-radius: 8px;
+	font-size: 18px;
+	display: inline;
+	width: 60%;
+	margin: 30px 10px 30px 0px;
+	color: #fff;
+}
+
+.button:hover{
+	border: 1px #00E4FF solid;
+	background-color: #fff;
+	color: #00E4FF;
+}
+
+.invbutton{
+	border: 1px #ddd solid;
+	padding: 10px;
+	font-family: "Avenir Next";
+	background-color: #fff;
+	border-radius: 8px;
+	font-size: 18px;
+	display: inline;
+	width: 100%;
+	margin: 30px 0px 30px 0px;
+	color: #ddd;
+}
+
+.invbutton:hover{
+	border: 1px #ddd solid;
+	background-color: #ddd;
+	color: #fff;
+}

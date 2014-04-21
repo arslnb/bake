@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bake</title>
+		<link href="static/css/main.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>Bake</h1>
+
+		
+		<div id = "lightbox">
+		<ol id = "tasklist">
+			{% for tasks in tasklist %}
+			<li id = "task">{{tasks}}</li>	
+			{% endfor %}
+		</ol>
+
+		 <form action = "" method="post">
+        {{ form.hidden_tag() }}
+                   
+        {{ form.newtask(class_ = 'inputbox', placeholder = "Enter a task here") }}
+         
+        <input class = "button" type="submit" value="Add Task">
+      </form>
+      </div>
+      <div id="spacer"></div>
+      <div id = "red" style="text-align: center; margin: 40px;"><a id = "logout" href="/logout">logout</a></div>
+	</body>
+</html>

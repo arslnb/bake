@@ -1,0 +1,109 @@
+* {
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+a {
+    -webkit-transition: background-position 1ms linear;
+    -moz-transition: background-position 1ms linear;
+    -o-transition: background-position 1ms linear;
+    transition: background-position 1ms linear;
+}
+
+*:focus {
+    outline: 1px #00E4FF solid;
+}
+
+#tasklist{
+	list-style: none;
+	text-align: left;
+	padding: 0px;
+	margin: 5px;
+}
+
+#tasklist li{
+	font-family: "Avenir";
+	font-size: 18px;
+	border: 1px #eee solid;
+	border-radius: 8px;
+	padding: 10px;
+	margin: 10px 0px;
+}
+
+h1{
+	color: #00E4FF;
+	font-family: "Wendy LP Std";
+	font-size: 120px;
+	line-height: 0px;
+	text-align: center;
+	padding: 30px;
+	margin-top: 100px;
+}
+
+#spacer{
+	height: 50px;
+	width: 100%;
+}
+
+#lightbox{
+	border: 1px #ddd solid;
+	border-radius: 10px;
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+h2{
+	font-family: "Proxima Nova";
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 20px;
+	color: #313131;
+	margin: 50px 0px;
+}
+
+.inputbox{
+	display: inherit;
+	border: 1px #aaa solid;
+	border-radius: 5px;
+	background: #eee;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 200;
+	font-family: "Avenir Next";
+	margin: 5px 5px 0px 5px;
+	width: 93%;
+}
+
+#logout{
+	font-family: "Avenir";
+	font-size: 20px;
+	text-decoration: none;
+	color: #ddd;
+	text-align: center;
+	margin: 20px;
+}
+
+.button{
+	border: 1px #00E4FF solid;
+	padding: 10px;
+	font-family: "Avenir Next";
+	background-color: #00E4FF;
+	border-radius: 8px;
+	font-size: 18px;
+	display: inline;
+	width: 97.7%;
+	margin: 10px 5px 5px 5px;
+	color: #fff;
+}
+
+#red:hover{
+	color: #944;
+}
+
+.button:hover{
+	border: 1px #00E4FF solid;
+	background-color: #fff;
+	color: #00E4FF;
+}

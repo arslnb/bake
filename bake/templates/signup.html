@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="static/css/styletwo.css">
+</head>
+<body>
+
+  <h1>Bake</h1>
+
+  <div id = "lightbox">
+  
+          <h2>Sign up</h2>       
+           
+          {% for message in form.email.errors %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+           
+          {% for message in form.password.errors %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+          <form action = "" method="post">
+            {{ form.hidden_tag() }}
+             
+             </br>
+            {{ form.email(class_ = 'inputbox', placeholder = "Your email please...")  }}
+             </br>
+            {{ form.password(class_ = 'inputbox', placeholder = "Choose a password...")  }}
+             </br>
+             {{ form.repassword(class_ = 'inputbox', placeholder = "Say that once more, please...")  }}
+             </br>
+            <input class = "button" type="submit" value="Sign Up">
+            <a style = "text-decoration: none;"href = "/login"><div class="invbutton">I'm already baking!</div></a>
+          </form>
+  </div>
+
+</body>
+</html>
+ 
+  
+     

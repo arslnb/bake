@@ -1,0 +1,36 @@
+<!doctype HTML>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    </head>
+    <body>
+
+      <h1>Bake</h1>
+
+      <div id = "lightbox">
+        <h2>Sign In</h2>
+       
+        {% for message in form.email.errors %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
+         
+        {% for message in form.password.errors %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
+         
+         <form action = "" method="post">
+          {{ form.hidden_tag() }}
+           
+          {{ form.email(class_ = 'inputbox', placeholder = "Your email please...") }}
+           
+          {{ form.password(class_ = 'inputbox', placeholder = "•••••••••••") }}
+           
+          <input class = "button" type="submit" value="Lets Bake!">
+          <a style = "text-decoration: none;"href = "/signup"><div class="invbutton">I'm new here!</div></a>
+        </form>
+      </div>
+
+    </body>
+</html>
+
+<!-- extend base layout -->
