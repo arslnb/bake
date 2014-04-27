@@ -1,2 +1,2 @@
 from bake import bake
-bake.run(debug = False)
+bake.run(debug = True)

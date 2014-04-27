@@ -10,6 +10,9 @@ class LoginForm(Form):
 class AddTask(Form):
 	newtask = TextField("newtask", validators = [Required()])
 
+class DeleteTask(Form):
+	pass
+
 class SignupForm(Form):
 	email = TextField("Email",  [validators.Required("Please enter your email address."), validators.Email("Please enter your email address.")])
 	password = PasswordField('Password', [validators.Required("Please enter a password.")])

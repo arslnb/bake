@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, session, url_for, request, make_response
 from bake import bake, db, models
-from forms import LoginForm, SignupForm, AddTask
+from forms import LoginForm, SignupForm, AddTask, DeleteTask
 from models import User, List
 from hashlib import md5
 import time
@@ -17,24 +17,32 @@ def double_entry(e):
 @bake.route("/", methods=['GET', 'POST'])
 def home():
 	form = AddTask()
+	delete = DeleteTask()
 
 	if 'email' not in session:
-		return redirect(url_for('login'))
+		return redirect(url_for('login')) 
 
+	user = User.query.filter_by(email = session['email']).first()
 
 	if request.method == 'POST':
-		if form.validate_on_submit():
-			user = User.query.filter_by(email = session['email']).first()
-			item = models.List(task = form.newtask.data, person = user)
-			db.session.add(item)
-			db.session.commit()
-			temp = models.List.query.filter_by(person = user)
-			return render_template('index.html', form = form, tasklist = temp)
+		if request.form['push'] == 'Add Task':
+			if form.validate_on_submit():
+				item = models.List(task = form.newtask.data, person = user)
+				db.session.add(item)
+				db.session.commit()
+				temp = models.List.query.filter_by(person = user)
+				return render_template('index.html', form = form, tasklist = temp)
 
+			else:
+				temp = models.List.query.filter_by(person = user)
+				form.email.errors.append("Error")
+				return render_template('index.html', form = form, tasklist = temp)
 		else:
-			user = User.query.filter_by(email = session['email']).first() 
+			instance = models.List.query.filter_by(id=int(request.form['push'])).first()
+			db.session.delete(instance)
+			db.session.commit()
+
 			temp = models.List.query.filter_by(person = user)
-			form.email.errors.append("Error")
 			return render_template('index.html', form = form, tasklist = temp)
 
 	elif request.method == 'GET':
