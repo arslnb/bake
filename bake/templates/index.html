@@ -11,11 +11,10 @@
 		<div id = "lightbox">
 		<ol id = "tasklist">
 			{% for task in tasklist %}
-			<li id = "task">{{task}} 
+			<li id = "task"><p>{{task}}</p>
 				<form action="" method="post">
 					{{ form.hidden_tag() }}
 					<input name = "push" class="delete" type="submit" value="{{task.id}}">
-					
 				</form>
 			</li>	
 			{% endfor %}

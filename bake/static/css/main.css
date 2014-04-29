@@ -22,17 +22,24 @@ a {
 	margin: 5px;
 }
 
+#task p{
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
 .delete{
 	float: right;
 	text-decoration: none;
 	border: 1px #ddd solid;
 	border-radius: 5px;
 	color: #ddd;
+	height: 25px;
 	background: #fff;
 }
 
 .delete:hover{
-	border: none;
+	border: 1px #fff solid;
 	color: #fff;
 	background: #ff2732;
 }
@@ -43,6 +50,7 @@ a {
 	border: 1px #eee solid;
 	border-radius: 8px;
 	padding: 10px;
+	height: 24px;
 	margin: 10px 0px;
 }
 
