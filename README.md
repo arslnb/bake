@@ -1,0 +1,1 @@
+It’s an app quickly made to help me make lists on the go. 
